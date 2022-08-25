@@ -15,6 +15,10 @@ char* Dec2RadixI(int decValue, int radValue){
 
     line[99] = '\0';//null terminates the return line
 
+    if (decValue == 0){
+        line[--i] = digits[0];
+    }
+
     while(decValue){//Loop that continues until the dynamic variable is equal to 0
         line[--i]=digits[decValue%radValue]; //Sets the next value in the radix value = to the value in digits[] that corresponds to the remainder
         decValue /= radValue;//Sets the new value of currentnum
