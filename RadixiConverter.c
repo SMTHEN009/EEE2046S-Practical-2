@@ -39,6 +39,11 @@ void main(){
     while(decnum >=0){
         printf("Enter a decimal number: ");
         scanf("%d",&decnum); //Reads decimal number
+
+        if(decnum <0){
+            break;
+        }
+
         printf("The number you have entered is %d\n",decnum); //Displays decimal number entered
         printf("Enter a radix for the converter between 2 and 16: "); 
         scanf("%d",&radix); //Reads radix number
