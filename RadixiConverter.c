@@ -3,7 +3,7 @@
 #include <string.h>
 
 #define TITLE "DECIMAL TO RADIX-i converter"
-#define AUTHOR "Hendrik Smuts"
+#define AUTHOR "Hendrik Smuts" //defines constants
 #define YEAR "2022"
 
 int decnum,radix;
@@ -31,25 +31,23 @@ void main(){
     printf("Date: %s\n",YEAR);
     printf("*****************************\n");
 
-    printf("Enter a decimal number: ");
-    scanf("%d",&decnum); //Reads decimal number
-    printf("The number you have entered is %d\n",decnum); //Displays decimal number entered
-    printf("Enter a radix for the converter between 2 and 16: "); 
-    scanf("%d",&radix); //Reads radix number
-    printf("The radix you have entered is %d\n",radix); //Displays radox number
-
-    printf("The log2 of the number is %.2f\n",log2(decnum)); //Displays the log2 of the decimal number entered
-
-    printf("The integer result of the number divided by %d is %d\n",radix,decnum/radix);//Displays the decimal number divided by the radix
-
-    printf("The remainder is %d\n",decnum%radix);//Displays the remainder of the decimal number divided by the radix
-    
-    printf("The radix-%d value is %s\n",radix,Dec2RadixI(decnum,radix)); //Displays the converted decimal to radix number
-
     decnum=1;
     while(decnum >=0){
         printf("Enter a decimal number: ");
-        scanf("%d",&decnum);
+        scanf("%d",&decnum); //Reads decimal number
+        printf("The number you have entered is %d\n",decnum); //Displays decimal number entered
+        printf("Enter a radix for the converter between 2 and 16: "); 
+        scanf("%d",&radix); //Reads radix number
+        printf("The radix you have entered is %d\n",radix); //Displays radix number
+
+        printf("The log2 of the number is %.2f\n",log2(decnum)); //Displays the log2 of the decimal number entered
+
+        printf("The integer result of the number divided by %d is %d\n",radix,decnum/radix);//Displays the decimal number divided by the radix
+
+        printf("The remainder is %d\n",decnum%radix);//Displays the remainder of the decimal number divided by the radix
+
+        printf("The radix-%d value is %s\n",radix,Dec2RadixI(decnum,radix)); //Displays the converted decimal to radix number
+
     }
 
     printf("EXIT");
